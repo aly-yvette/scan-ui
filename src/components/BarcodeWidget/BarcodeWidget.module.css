@@ -1,0 +1,63 @@
+.container {
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .code,
+    dl {
+        /* Extra backdrop filter */
+        backdrop-filter: blur(15px);
+    }
+
+    .code {
+        font-size: 44px;
+        font-family: monospace;
+        padding: 8px 10px;
+        border: 1px solid white;
+        border-left-width: 5px;
+
+        /* Slide the bottom border behind */
+        margin-bottom: -1px;
+
+
+    }
+
+    dl {
+        backdrop-filter: blur(15px);
+        margin: 0;
+
+        border: 1px solid white;
+        display: flex;
+        padding: 6px;
+
+        .dataItem {
+            display: flex;
+            flex-shrink: 1;
+            margin-right: 10px;
+            gap: 3px;
+            font-family: 'Cairo';
+
+            dt,
+            dd {
+                padding: 2px 4px;
+            }
+
+            dt {
+                font-size: 15px;
+                font-weight: 600;
+                background-color: rgba(255, 255, 255, 1);
+                mix-blend-mode: lighten;
+                color: black;
+                text-transform: uppercase;
+            }
+
+            dd {
+                flex-shrink: 1;
+                margin: 0;
+            }
+        }
+    }
+}
