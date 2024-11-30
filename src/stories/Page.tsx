@@ -27,8 +27,8 @@ export const Page: React.FC = () => {
     <article>
       <div style={{ gap: '10px', display: 'flex', flexDirection: 'column', margin: '20px' }}>
         <NumberWithProgress number='38g' progress={progress} />
-        <BarcodeWidget code='13052231' type='UPC_EAN' />
-        <BarcodeWidget code='9412134' type='UPC' />
+        <BarcodeWidget barcode={{ code: '13052231', type: 'UPC_EAN' }} />
+        <BarcodeWidget barcode={{ code: '9412134', type: 'UPC' }} />
       </div>
 
     </article>
