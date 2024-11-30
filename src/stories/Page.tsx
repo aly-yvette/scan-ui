@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
-import { Header } from './Header';
 import './page.css';
 import BarcodeWidget from '../components/BarcodeWidget/BarcodeWidget';
 import NumberWithProgress from '../components/NumberWithProgress/NumberWithProgress';
