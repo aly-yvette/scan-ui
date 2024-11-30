@@ -11,5 +11,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: { code: '02351234', type: 'UPC_EAN' }
+  args: { barcode: { code: '02351234', type: 'UPC_EAN' } }
 };

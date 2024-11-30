@@ -12,6 +12,7 @@
       "withStory": true,
       "withLazy": false,
       "customTemplates": {
+        "component": ".templates/TemplateName.tsx",
         "story": ".templates/TemplateName.stories.tsx"
       }
     }

@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './BarcodeWidget.module.css'
+import { Barcode } from '../BarcodeWidgets/BarcodeWidgets'
 
-type Props = { code: string, type: string }
+type Props = { barcode: Barcode }
 
-export default function BarcodeWidget({ code, type }: Props) {
+export default function BarcodeWidget({ barcode }: Props) {
+    const { code, type } = barcode
     return (
         <div className={styles.container}>
             <div className={styles.code}>{code}</div>
