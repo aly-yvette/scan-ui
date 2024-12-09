@@ -1,0 +1,44 @@
+import { Canvas, Meta, Source, Description, Controls } from '@storybook/blocks';
+ 
+import * as EventContextStories from './EventContext.stories';
+ 
+<Meta of={EventContextStories} />
+ 
+# EventContext
+
+
+## Creating an EventContext
+To allow better typing, you can create a new event context with a matching `<EventProvider>` and `useEventContext` hook. 
+You should pass it a [discriminated union](https://basarat.gitbook.io/typescript/type-system/discriminated-unions) of all 
+events you plan to use in the system.
+ 
+```typescript
+// Specify your event types
+// You can define these as any types you like, but ensuring you have a unique literal member such as "type" 
+// is important
+type Event = {type: "greeting", payload: string } | {type: "farewell", payload: string }
+
+// Create and export
+export const {EventProvider, useEventContext} = createEventContext<Event>();
+```
+
+You can now start to setup your event system.
+
+## EventProvider
+
+{/* @todo for some reason this won't generate code for generated components */}
+{/* <Source of={EventContextStories.Default} /> */}
+
+Wrap your components in `<EventProvider>`
+
+```tsx
+<EventProvider url="ws://localhost:8080">
+    <Consumer>
+</EventProvider>
+```
+
+## useEventContext hook
+You can then use `useEventContext` in your components.
+
+- `onMessage((event: Event) => void)`
+- `send(event: Event)`
